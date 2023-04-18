@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="MainGame">
+      <UniqueIdentifier>{075a02a6-80f2-49dd-8780-b89dd32c21e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Player">
+      <UniqueIdentifier>{0e428c65-47a9-4720-b66d-6fe769302013}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Monster">
+      <UniqueIdentifier>{240791e8-76ea-48f3-9682-28694f6babb0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Creature">
+      <UniqueIdentifier>{c9c0f73f-9a0a-40c9-9582-802b80117d86}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Control">
+      <UniqueIdentifier>{599645cf-83ba-4964-bd7f-354a67a6892c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Player\Items">
+      <UniqueIdentifier>{706d9d5b-8e6d-4400-aabf-e2d13f5dc4a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plaza">
+      <UniqueIdentifier>{20f09f0e-dfba-4060-bc0d-384dfb134147}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="쥬신 Text RPG Ver2.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="MainGame.cpp">
+      <Filter>MainGame</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Monster.cpp">
+      <Filter>Monster</Filter>
+    </ClCompile>
+    <ClCompile Include="Creature.cpp">
+      <Filter>Creature</Filter>
+    </ClCompile>
+    <ClCompile Include="Control.cpp">
+      <Filter>Control</Filter>
+    </ClCompile>
+    <ClCompile Include="Items.cpp">
+      <Filter>Player\Items</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="MainGame.h">
+      <Filter>MainGame</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Monster.h">
+      <Filter>Monster</Filter>
+    </ClInclude>
+    <ClInclude Include="Creature.h">
+      <Filter>Creature</Filter>
+    </ClInclude>
+    <ClInclude Include="Stat.h">
+      <Filter>Creature</Filter>
+    </ClInclude>
+    <ClInclude Include="Control.h">
+      <Filter>Control</Filter>
+    </ClInclude>
+    <ClInclude Include="Items.h">
+      <Filter>Player\Items</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
