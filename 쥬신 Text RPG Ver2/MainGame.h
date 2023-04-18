@@ -1,6 +1,7 @@
 #pragma once
 #include "Player.h"
 #include "Control.h"
+#include "Town.h"
 
 class CMainGame
 {
@@ -18,5 +19,6 @@ public:
 private:
 	CPlayer* m_pPlayer;
 	CControl m_Control;
+	CTown m_Town;
 };
 

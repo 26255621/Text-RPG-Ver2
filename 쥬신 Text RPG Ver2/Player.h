@@ -14,9 +14,17 @@ public:
 	void Release();
 
 	void Make_Player();
+	void Show_Player();
+
+	void Level_Up();
+	void Add_Exp(CCreature* _Creature);
+	void ChangeEquiment();
+
+
 private:
 	char m_szJob[8];
-	int m_iMaxExp, m_iEXp;
+	int m_iMaxExp;
+	int m_iLevel;
 	CItems* m_pWeapon;
 	CItems* m_pArmor;
 

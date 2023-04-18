@@ -17,10 +17,12 @@ void CMainGame::Initialize()
 {
 	m_Control.CursorView();
 	m_pPlayer = new CPlayer;
+	
 }
 
 void CMainGame::Update()
 {
+	int iSelect(0);
 	if (2 == MainMenu())
 		return;
 	while (true) {
@@ -30,7 +32,14 @@ void CMainGame::Update()
 			Initialize();
 			m_pPlayer->Make_Player();
 		}
-
+		m_Town.Initialize(m_pPlayer);
+		iSelect = m_Town.Plaza();
+		if (4 == iSelect)
+			Save_File();
+		else if (5 == iSelect) {
+			system("cls");
+			return;
+		}
 	}
 
 }

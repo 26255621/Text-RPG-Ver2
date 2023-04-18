@@ -10,57 +10,22 @@ CCreature::~CCreature()
 {
 }
 
-char* CCreature::Get_Name()
+void CCreature::Creature_Damage(CCreature* _Creature)
 {
-	return m_szName;
+	m_iHp -= _Creature->m_iExtraAtk;
 }
 
-int CCreature::Get_ExtraAtk()
+void CCreature::Add_Gold(CCreature* _Creature)
 {
-	return m_iExtraAtk;
+	m_iGold += _Creature->m_iGold;
 }
 
-int CCreature::Get_Atk()
+void CCreature::Lost_Gold(int _Price)
 {
-	return m_iAtk;
+	m_iGold -= _Price;
 }
 
-int CCreature::Get_ExtraDef()
+void CCreature::Add_Exp(CCreature* _Creature)
 {
-	return m_iExtraDef;
-}
-
-int CCreature::Get_Def()
-{
-	return m_iDef;
-}
-
-int CCreature::Get_ExtraHp()
-{
-	return m_iExtraHp;
-}
-
-int CCreature::Get_MaxHp()
-{
-	return m_iMaxHp;
-}
-
-int CCreature::Get_Hp()
-{
-	return m_iHp;
-}
-
-int CCreature::Get_ExtraMp()
-{
-	return m_iExtraMp;
-}
-
-int CCreature::Get_MaxMp()
-{
-	return m_iMaxMp;
-}
-
-int CCreature::Get_Mp()
-{
-	return m_iMp;
+	m_iExp += _Creature->m_iExp;
 }

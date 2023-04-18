@@ -1,10 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="소스 파일">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
     <Filter Include="헤더 파일">
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
@@ -16,23 +12,33 @@
     <Filter Include="MainGame">
       <UniqueIdentifier>{075a02a6-80f2-49dd-8780-b89dd32c21e5}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Player">
-      <UniqueIdentifier>{0e428c65-47a9-4720-b66d-6fe769302013}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Monster">
-      <UniqueIdentifier>{240791e8-76ea-48f3-9682-28694f6babb0}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Creature">
       <UniqueIdentifier>{c9c0f73f-9a0a-40c9-9582-802b80117d86}</UniqueIdentifier>
     </Filter>
     <Filter Include="Control">
       <UniqueIdentifier>{599645cf-83ba-4964-bd7f-354a67a6892c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Player\Items">
+    <Filter Include="Field">
+      <UniqueIdentifier>{20f09f0e-dfba-4060-bc0d-384dfb134147}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Field\Town">
+      <UniqueIdentifier>{dd3d45f7-b01a-4214-9e13-75b2413c0700}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Items">
       <UniqueIdentifier>{706d9d5b-8e6d-4400-aabf-e2d13f5dc4a0}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Plaza">
-      <UniqueIdentifier>{20f09f0e-dfba-4060-bc0d-384dfb134147}</UniqueIdentifier>
+    <Filter Include="Creature\Monster">
+      <UniqueIdentifier>{240791e8-76ea-48f3-9682-28694f6babb0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Creature\Player">
+      <UniqueIdentifier>{0e428c65-47a9-4720-b66d-6fe769302013}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Field\Dungeon">
+      <UniqueIdentifier>{42f7d5b9-b4be-422b-9e68-483d584114e6}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -46,10 +52,10 @@
       <Filter>MainGame</Filter>
     </ClCompile>
     <ClCompile Include="Player.cpp">
-      <Filter>Player</Filter>
+      <Filter>Creature\Player</Filter>
     </ClCompile>
     <ClCompile Include="Monster.cpp">
-      <Filter>Monster</Filter>
+      <Filter>Creature\Monster</Filter>
     </ClCompile>
     <ClCompile Include="Creature.cpp">
       <Filter>Creature</Filter>
@@ -58,7 +64,16 @@
       <Filter>Control</Filter>
     </ClCompile>
     <ClCompile Include="Items.cpp">
-      <Filter>Player\Items</Filter>
+      <Filter>Items</Filter>
+    </ClCompile>
+    <ClCompile Include="Town.cpp">
+      <Filter>Field\Town</Filter>
+    </ClCompile>
+    <ClCompile Include="Field.cpp">
+      <Filter>Field</Filter>
+    </ClCompile>
+    <ClCompile Include="Dungeon.cpp">
+      <Filter>Field\Dungeon</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -69,10 +84,10 @@
       <Filter>MainGame</Filter>
     </ClInclude>
     <ClInclude Include="Player.h">
-      <Filter>Player</Filter>
+      <Filter>Creature\Player</Filter>
     </ClInclude>
     <ClInclude Include="Monster.h">
-      <Filter>Monster</Filter>
+      <Filter>Creature\Monster</Filter>
     </ClInclude>
     <ClInclude Include="Creature.h">
       <Filter>Creature</Filter>
@@ -84,7 +99,16 @@
       <Filter>Control</Filter>
     </ClInclude>
     <ClInclude Include="Items.h">
-      <Filter>Player\Items</Filter>
+      <Filter>Items</Filter>
+    </ClInclude>
+    <ClInclude Include="Town.h">
+      <Filter>Field\Town</Filter>
+    </ClInclude>
+    <ClInclude Include="Field.h">
+      <Filter>Field</Filter>
+    </ClInclude>
+    <ClInclude Include="Dungeon.h">
+      <Filter>Field\Dungeon</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
