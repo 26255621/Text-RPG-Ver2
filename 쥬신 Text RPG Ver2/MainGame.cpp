@@ -3,9 +3,8 @@
 
 
 
-CMainGame::CMainGame() : m_pPlayer(nullptr)
+CMainGame::CMainGame() : m_pPlayer(nullptr), m_Town(nullptr)
 {
-
 }
 
 CMainGame::~CMainGame()
@@ -17,14 +16,18 @@ void CMainGame::Initialize()
 {
 	m_Control.CursorView();
 	m_pPlayer = new CPlayer;
-	
+	m_Town = new CTown;
+	m_Town->Initialize(m_pPlayer);
 }
 
 void CMainGame::Update()
 {
 	int iSelect(0);
-	if (2 == MainMenu())
+	if (2 == MainMenu()) {
+		system("cls");
 		return;
+	}
+
 	while (true) {
 		// 캐릭터 사망시 처음부터 시작하자
 		if (0 >= m_pPlayer->Get_Hp()) {
@@ -32,8 +35,7 @@ void CMainGame::Update()
 			Initialize();
 			m_pPlayer->Make_Player();
 		}
-		m_Town.Initialize(m_pPlayer);
-		iSelect = m_Town.Plaza();
+		iSelect = m_Town->Plaza();
 		if (4 == iSelect)
 			Save_File();
 		else if (5 == iSelect) {
@@ -46,6 +48,10 @@ void CMainGame::Update()
 
 void CMainGame::Release()
 {
+	if (m_Town) {
+		delete m_Town;
+		m_Town = nullptr;
+	}
 	if (m_pPlayer) {
 		delete m_pPlayer;
 		m_pPlayer = nullptr;

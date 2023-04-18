@@ -105,11 +105,13 @@ void CPlayer::Show_Player()
 
 void CPlayer::Level_Up()
 {
-	m_iHp = m_iMaxHp += 10;
-	m_iMp = m_iMaxMp += 10;
+	if (m_iExp > m_iMaxExp) {
+		m_iHp = m_iMaxHp += 10;
+		m_iMp = m_iMaxMp += 10;
 
-	m_iMaxExp += 50;
-	m_iExp = 0;
-	++m_iLevel;
+		m_iMaxExp += 50;
+		m_iExp = 0;
+		++m_iLevel;
+	}
 }
 

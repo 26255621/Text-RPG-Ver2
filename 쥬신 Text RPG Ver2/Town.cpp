@@ -1,9 +1,28 @@
 #include "pch.h"
 #include "Town.h"
 
+CTown::CTown() : m_Dungeon(nullptr)
+{
+}
+
+CTown::~CTown()
+{
+	Release();
+}
+
 void CTown::Initialize(CPlayer* _Player)
 {
 	m_pPlayer = _Player;
+	m_Dungeon = new CDungeon;
+	m_Dungeon->Initialize(m_pPlayer);
+}
+
+void CTown::Release()
+{
+	if (m_Dungeon) {
+		delete m_Dungeon;
+		m_Dungeon = nullptr;
+	}
 }
 
 int CTown::Plaza()
@@ -35,14 +54,14 @@ int CTown::Plaza()
 	switch (iSelect)
 	{
 	case 0:
-		// Todo: 던전
+		m_Dungeon->Choose_Dungeon();
 		break;
 	case 1:
-		// inn
+		// 병원
 		Hospital();
 		break;
 	case 2:
-		// shop
+		// 상점
 		Shop();
 		break;
 	case 3:
@@ -57,6 +76,7 @@ int CTown::Plaza()
 	default:
 		break;
 	}
+	return iSelect;
 }
 
 void CTown::Hospital()

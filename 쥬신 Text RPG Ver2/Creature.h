@@ -12,6 +12,7 @@ public:
 	void Lost_Gold(int _Price);
 	void Add_Exp(CCreature* _Creature);
 
+	void Show_Info();
 
 public:
 	int Get_Hp() { return m_iHp; }

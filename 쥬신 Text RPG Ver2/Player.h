@@ -17,7 +17,6 @@ public:
 	void Show_Player();
 
 	void Level_Up();
-	void Add_Exp(CCreature* _Creature);
 	void ChangeEquiment();
 
 

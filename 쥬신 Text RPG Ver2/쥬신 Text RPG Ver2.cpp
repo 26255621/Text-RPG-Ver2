@@ -4,8 +4,6 @@
 #include "pch.h"
 #include "MainGame.h"
 
-#define _CRTDBG_MAP_ALLOC
-#include <crtdbg.h>
 
 void main()
 {

@@ -19,6 +19,6 @@ public:
 private:
 	CPlayer* m_pPlayer;
 	CControl m_Control;
-	CTown m_Town;
+	CTown* m_Town;
 };
 
